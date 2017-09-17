@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
     xmlns:fo="http://www.w3.org/1999/XSL/Format" exclude-result-prefixes="fo">
 <xsl:template match="books">
-    <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-family="Arial">
+    <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-family="MyFont">
       <fo:layout-master-set>
         <fo:simple-page-master master-name="simpleA4" page-height="29.7cm" page-width="21cm" margin-top="2cm" margin-bottom="2cm" margin-left="2cm" margin-right="2cm">
           <fo:region-body/>
@@ -27,7 +27,7 @@
      </fo:root>
 </xsl:template>
 <xsl:template match="book">
-    <fo:table-row>   
+    <fo:table-row>	
      <xsl:if test="author = 'Pisac'">
             <xsl:attribute name="font-weight">bold</xsl:attribute>
       </xsl:if>
@@ -36,7 +36,6 @@
           <xsl:value-of select="id"/>
         </fo:block>
       </fo:table-cell>
-     
       <fo:table-cell>
         <fo:block>
           <xsl:value-of select="name"/>

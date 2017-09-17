@@ -1,0 +1,4 @@
+If you move "MyFont.ttf" or "MyFontBold.ttf" files
+please change "embed-url" in "mycfg.xcong" file accordigly:
+In line 81 and 85 of "mycfg.xcong" file you need to set
+"embed-url" to new path.
